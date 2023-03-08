@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.blue,
         brightness: Brightness.dark,
         cardColor: Color(0XFF252939),
@@ -45,6 +46,7 @@ class CarShow extends StatelessWidget {
       appBar: AppBar(
         title: Text('Cars List'),
         centerTitle: true,
+        backgroundColor: Theme.of(context).cardColor,
       ),
       body: FutureBuilder(
         future: getData(),
@@ -56,6 +58,7 @@ class CarShow extends StatelessWidget {
                 crossAxisCount: 2,
                 mainAxisSpacing: 8,
                 crossAxisSpacing: 8,
+                childAspectRatio: 16 / 14,
               ),
               padding: EdgeInsets.all(16),
               itemBuilder: (BuildContext context, int index) {
